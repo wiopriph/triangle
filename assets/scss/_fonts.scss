@@ -1,0 +1,105 @@
+$ui-ff-default: Roboto, 'Segoe UI', 'Gerbera', Helvetica, Arial, sans-serif;
+$font-medium-weight: 500;
+$font-bold-weight: 700;
+
+// Text
+@mixin ui-typo-15 {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+@mixin ui-typo-15-medium {
+  font-weight: $font-medium-weight;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+@mixin ui-typo-18 {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+@mixin ui-typo-18-bold {
+  font-weight: $font-bold-weight;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+// Headers
+@mixin ui-typo-h1-desktop {
+  font-weight: $font-medium-weight;
+  font-size: 51px;
+  line-height: 62px;
+}
+
+@mixin ui-typo-h1-mobile {
+  font-weight: $font-bold-weight;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+@mixin ui-typo-h1 {
+  @include exclude-md {
+    @include ui-typo-h1-desktop;
+  }
+
+  @include md {
+    @include ui-typo-h1-mobile;
+  }
+}
+
+@mixin ui-typo-h2-desktop {
+  font-weight: $font-medium-weight;
+  font-size: 48px;
+  line-height: 57px;
+}
+
+@mixin ui-typo-h2-mobile {
+  font-weight: $font-medium-weight;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+@mixin ui-typo-h2 {
+  @include exclude-md {
+    @include ui-typo-h2-desktop;
+  }
+
+  @include md {
+    @include ui-typo-h2-mobile;
+  }
+}
+
+@mixin ui-typo-h3-desktop {
+  font-weight: $font-medium-weight;
+  font-size: 27px;
+  line-height: 34px;
+}
+
+@mixin ui-typo-h3-mobile {
+  font-weight: $font-medium-weight;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+@mixin ui-typo-h3 {
+  @include exclude-md {
+    @include ui-typo-h3-desktop;
+  }
+
+  @include md {
+    @include ui-typo-h3-mobile;
+  }
+}
+
+// Screen readers
+@mixin ui-typo-screen-readers {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}

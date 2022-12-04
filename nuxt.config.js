@@ -9,7 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Main page',
+    titleTemplate: '%s | Triângulo',
+    title: 'default title',
     htmlAttrs: {
       lang: 'en',
     },
@@ -22,8 +23,22 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+  styleResources: {
+    scss: ['~/assets/scss/index.scss'],
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/scss/global.scss'],
+
+  // Google fonts https://google-fonts.nuxtjs.org/options
+  googleFonts: {
+    families: {
+      Roboto: {
+        wght: [400, 500, 700, 900],
+      },
+    },
+    display: 'swap',
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -32,18 +47,63 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
-  ],
+  buildModules: ['@nuxt/postcss8', '@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/style-resources'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    publicPath: 'public',
+
+    splitChunks: {
+      pages: true,
+      layouts: true,
+      commons: true,
+    },
+
+    optimizeCSS: true,
+    cssSourceMap: false,
+
+    postcss: {
+      plugins: {
+        'postcss-preset-env': {},
+        'postcss-import': {},
+        'postcss-url': {},
+        'postcss-nested': {},
+        'postcss-sorting': {},
+        'postcss-merge-rules': {},
+        cssnano: {
+          preset: ['advanced', { zindex: false }],
+        },
+      },
+      order: 'presetEnvAndCssnanoLast',
+      preset: {
+        autoprefixer: {
+          overrideBrowserslist: ['last 3 versions', '> 1%'],
+        },
+      },
+    },
+
+    babel: {
+      plugins: [
+        ['@babel/plugin-proposal-class-properties', { loose: true }],
+        ['@babel/plugin-proposal-private-methods', { loose: true }],
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
+      ],
+    },
+
+    loaders: {
+      cssModules: {
+        modules: {
+          localIdentName:
+            process.env.NODE_ENV === 'production'
+              ? '[hash:base64:8]'
+              : '[name]__[local]--[hash:base64:5]',
+        },
+      },
+    },
+  },
 
   extend(config, { isClient, isDev }) {
     config.resolve.alias.vue = 'vue/dist/vue.common';
