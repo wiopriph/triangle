@@ -54,7 +54,7 @@ $iconWidth: 146px;
   justify-content: center;
   width: $iconWidth;
   height: $iconWidth;
-  background: $ui-color-transparent;
+  background: #F1F1F1;
   border-radius: 50%;
   transition: background-color .2s linear;
 }

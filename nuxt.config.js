@@ -20,7 +20,9 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    ],
   },
 
   styleResources: {
@@ -47,7 +49,12 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ['@nuxt/postcss8', '@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
+  buildModules: [
+    '@nuxtjs/eslint-module',
+    '@nuxt/postcss8',
+    '@nuxtjs/svg',
+    '@nuxtjs/stylelint-module',
+  ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/style-resources'],

@@ -1,5 +1,16 @@
 <template>
   <div :class="$style.root">
+    <div :class="$style.teaser">
+      <TeaserCard
+        v-for="item in teaserSlides"
+        :key="item.type"
+        :title="item.title"
+        :icon="item.icon"
+        :url="item.url"
+        :color="item.color"
+      />
+    </div>
+
     <h2 :class="$style.title">
       Category
     </h2>
@@ -30,6 +41,7 @@
 
 <script>
 import { CATEGORIES } from '~/constants/categories';
+import { TEASER_SLIDES } from '~/mocks/teaser';
 
 export default {
   name: 'IndexPage',
@@ -37,6 +49,7 @@ export default {
   data() {
     return {
       categories: CATEGORIES,
+      teaserSlides: TEASER_SLIDES,
     };
   },
 };
@@ -47,6 +60,11 @@ export default {
   @include ui-simple-container;
   margin-top: 60px; // @todo: fix header
   padding: 24px 20px;
+}
+
+.teaser {
+  margin-top: 26px;
+  margin-bottom: 64px;
 }
 
 .title {
