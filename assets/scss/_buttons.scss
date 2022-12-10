@@ -1,0 +1,26 @@
+@mixin ui-button {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: color .2s linear, background .2s linear, background-color .2s linear;
+  appearance: none;
+  user-select: none;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+@mixin ui-button-hover {
+  color: $ui-color-black;
+  background-color: $ui-color-transparent;
+}
+
+@mixin ui-button-active {
+  color: $ui-color-white;
+  background-color: $ui-color-black;
+}
