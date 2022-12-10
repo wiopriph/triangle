@@ -3,10 +3,27 @@ $font-medium-weight: 500;
 $font-bold-weight: 700;
 
 // Text
+@mixin ui-typo-8 {
+  font-size: 8px;
+  line-height: 10px;
+}
+
 @mixin ui-typo-10-medium {
   font-weight: $font-medium-weight;
   font-size: 10px;
   line-height: 12px;
+}
+
+
+@mixin ui-typo-12 {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@mixin ui-typo-14-bold {
+  font-weight: $font-medium-weight;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 @mixin ui-typo-15 {

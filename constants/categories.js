@@ -1,73 +1,73 @@
 const CATEGORIES = [
   {
-    type: 'realty',
-    img: 'https://api.youla.io/files/icons/icon-cat-realty-rotator.png',
-    label: 'Недвижимость',
-  },
-  {
-    type: 'auto',
-    img: 'https://api.youla.io/files/icons/icon-cat-automobiles-rotator.png',
-    label: 'Легковые автомобили',
-  },
-  {
-    type: 'services',
-    img: 'https://api.youla.io/files/icons/icon-cat-services-rotator.png',
-    label: 'Услуги исполнителей',
-  },
-  {
-    type: 'application',
-    img: 'https://api.youla.io/files/icons/icon-application-280x224.png',
-    label: 'Заявки на услуги',
-  },
-  {
-    type: 'womenswear',
-    img: 'https://api.youla.io/files/icons/icon-cat-wclothes-rotator.png',
-    label: 'Женский гардероб',
+    type: 'appliances',
+    label: 'Appliances',
+    img: '/images/categories/appliances.png',
   },
   {
     type: 'gadgets',
-    img: 'https://api.youla.io/files/icons/icon-cat-gadgets-rotator.png',
-    label: 'Телефоны и планшеты',
+    label: 'Phones and tablets',
+    img: '/images/categories/gadgets.png',
   },
   {
-    type: 'spares',
-    img: 'https://api.youla.io/files/icons/icon-cat-automoto-rotator.png',
-    label: 'Запчасти и автотовары',
+    type: 'computers',
+    label: 'Computers',
+    img: '/images/categories/computers.png',
   },
   {
-    type: 'kidswear',
-    img: 'https://api.youla.io/files/icons/icon-cat-kidswear-rotator.png',
-    label: 'Детский гардероб',
-  },
-  {
-    type: 'vacancies',
-    img: 'https://api.youla.io/files/icons/icon-cat-vacancies-rotator.png',
-    label: 'Вакансии',
-  },
-  {
-    type: 'motorcycles',
-    img: 'https://api.youla.io/files/icons/icon-cat-motorcycles-rotator.png',
-    label: 'Спецтехника и мотоциклы',
-  },
-  {
-    type: 'menswear',
-    img: 'https://api.youla.io/files/icons/icon-cat-mclothes-rotator.png',
-    label: 'Мужской гардероб',
+    type: 'services',
+    label: 'Services',
+    img: '/images/categories/services.png',
   },
   {
     type: 'kids',
-    img: 'https://api.youla.io/files/icons/icon-cat-kids-rotator.png',
-    label: 'Детские товары',
+    label: 'Children\'s products',
+    img: '/images/categories/kids.png',
   },
   {
-    type: 'handmade',
-    img: 'https://api.youla.io/files/icons/icon-cat-handmade-rotator.png',
-    label: 'Хэндмейд',
+    type: 'job',
+    label: 'Job',
+    img: '/images/categories/job.png',
+  },
+  {
+    type: 'clothes',
+    label: 'Clothes and shoes',
+    img: '/images/categories/clothes.png',
+  },
+  {
+    type: 'tv',
+    label: 'TV, audio, video',
+    img: '/images/categories/tv.png',
   },
   {
     type: 'photo',
-    img: 'https://api.youla.io/files/icons/icon-cat-photo-rotator.png',
-    label: 'Фото- и видеокамеры',
+    label: 'Photo, video',
+    img: '/images/categories/photo.png',
+  },
+  {
+    type: 'furniture',
+    label: 'Furniture, interior',
+    img: '/images/categories/furniture.png',
+  },
+  {
+    type: 'sport',
+    label: 'Sporting goods',
+    img: '/images/categories/sport.png',
+  },
+  {
+    type: 'handmade',
+    label: 'Handmade',
+    img: '/images/categories/handmade.png',
+  },
+  {
+    type: 'food',
+    label: 'Food',
+    img: '/images/categories/food.png',
+  },
+  {
+    type: 'health',
+    label: 'Beauty and health',
+    img: '/images/categories/health.png',
   },
 ];
 

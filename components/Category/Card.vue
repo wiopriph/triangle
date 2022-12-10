@@ -65,7 +65,7 @@ $iconWidth: 146px;
   align-items: center;
   justify-content: center;
   width: $iconWidth;
-  color: $ui-color-black;
+  color: $ui-color-text-black;
   text-decoration: none;
 
   &:hover {
@@ -84,8 +84,8 @@ $iconWidth: 146px;
 }
 
 .icon {
-  max-width: 120px;
-  max-height: 120px;
+  max-width: 70px;
+  max-height: 70px;
 }
 
 .label {

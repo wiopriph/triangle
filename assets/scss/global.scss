@@ -7,9 +7,9 @@
 html {
   @include ui-typo-15;
   box-sizing: border-box;
-  color: $ui-color-black;
+  color: $ui-color-text-black;
   font-family: $ui-ff-default;
-  background: $ui-color-background-color;
+  background: $ui-color-white;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;

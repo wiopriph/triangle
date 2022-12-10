@@ -36,9 +36,6 @@ export default {
       default: '#F1F1F1',
     },
   },
-
-  computed: {
-  },
 };
 </script>
 
@@ -95,7 +92,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: $ui-color-background-color;
+  color: $ui-color-white;
   border-radius: 50%;
 
   @include exclude-sm {
