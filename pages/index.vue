@@ -1,33 +1,12 @@
 <template>
   <div :class="$style.root">
-    <div :class="$style.teaser">
-      <TeaserCard
-        v-for="item in teaserSlides"
-        :key="item.type"
-        :title="item.title"
-        :icon="item.icon"
-        :url="item.url"
-        :color="item.color"
-      />
-    </div>
+    <TeaserList :class="$style.teaser" />
 
     <h2 :class="$style.title">
       Category
     </h2>
 
-    <ul :class="$style.categories">
-      <li
-        v-for="item in categories"
-        :key="item.type"
-        :class="$style.category"
-      >
-        <CategoryCard
-          :alias="item.type"
-          :icon="item.img"
-          :label="item.label"
-        />
-      </li>
-    </ul>
+    <CategoryList :class="$style.category" />
 
     <h2 :class="$style.title">
       Fresh ads
@@ -40,18 +19,9 @@
 </template>
 
 <script>
-import { CATEGORIES } from '~/constants/categories';
-import { TEASER_SLIDES } from '~/mocks/teaser';
 
 export default {
   name: 'IndexPage',
-
-  data() {
-    return {
-      categories: CATEGORIES,
-      teaserSlides: TEASER_SLIDES,
-    };
-  },
 };
 </script>
 
@@ -60,6 +30,10 @@ export default {
   @include ui-simple-container;
   margin-top: 160px; // @todo: fix header
   padding: 24px 20px;
+
+  //@include md {
+  //  padding: 24px 0;
+  //}
 }
 
 .teaser {
@@ -67,21 +41,11 @@ export default {
   margin-bottom: 64px;
 }
 
-.title {
-  margin-bottom: 36px;
-}
-
-.categories {
-  display: flex;
-  flex-wrap: wrap;
+.category {
   margin-bottom: 64px;
 }
 
-.category {
-  margin-bottom: 16px;
-
-  & + & {
-    margin-left: 8px;
-  }
+.title {
+  margin-bottom: 36px;
 }
 </style>

@@ -65,6 +65,7 @@ $iconWidth: 146px;
   align-items: center;
   justify-content: center;
   width: $iconWidth;
+  max-width: $iconWidth;
   color: $ui-color-text-black;
   text-decoration: none;
 
