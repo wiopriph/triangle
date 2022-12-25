@@ -28,12 +28,8 @@ export default {
 <style lang="scss" module>
 .root {
   @include ui-simple-container;
-  margin-top: 160px; // @todo: fix header
   padding: 24px 20px;
 
-  //@include md {
-  //  padding: 24px 0;
-  //}
 }
 
 .teaser {
