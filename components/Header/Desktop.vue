@@ -23,8 +23,8 @@ export default {
 </script>
 
 <template>
-  <div :class="$style.root">
-    <div aria-label="Header">
+  <div :class="$style.wrap">
+    <div aria-label="Header" :class="$style.root">
       <div :class="$style.navigationMenu">
         <button :class="[$style.button, $style.locationButton]">
           <IconLocation :class="$style.icon" />
@@ -68,6 +68,13 @@ export default {
 </template>
 
 <style lang="scss" module>
+.wrap {
+  width: 100%;
+  max-width: inherit;
+  height: 160px;
+  min-height: 160px;
+}
+
 .root {
   position: fixed;
   top: 0;
