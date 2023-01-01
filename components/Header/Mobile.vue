@@ -105,11 +105,11 @@ export default {
 }
 
 .pinned {
-  transform: translate3d(0, 0, 0);
+  transform: translateY(0);
 }
 
 .unpinned {
-  transform: translate3d(0, -100%, 0);
+  transform: translateY(-100%);
 }
 
 .unfixed {
@@ -171,7 +171,7 @@ $ad-gap: 50px;
   padding: 16px;
   color: $ui-color-white;
   background-color: $ui-color-add;
-  transform: translate3d(-50%, $ad-height + $ad-gap, 0);
+  transform: translateX(-50%) translateY($ad-height + $ad-gap);
   transition: .2s transform linear;
 
   &:hover {
@@ -184,6 +184,6 @@ $ad-gap: 50px;
 }
 
 .showButton {
-  transform: translate3d(-50%, 0, 0);
+  transform: translateX(-50%) translateY(0);
 }
 </style>
