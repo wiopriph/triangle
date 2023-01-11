@@ -84,6 +84,7 @@ export default {
 
 .card {
   @include ui-col-ready;
+  @include ui-col-vertical-gutter;
   @include ui-col(2);
 
   @include lg {

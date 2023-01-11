@@ -29,7 +29,7 @@ export default {
     target="_blank"
     rel="noopener noreferrer"
   >
-    <div :class="$style.photo">
+    <div :class="$style.photoWrap">
       <span :class="$style.address" v-text="ads.city" />
       <img
         :src="ads.photo"
@@ -49,6 +49,7 @@ export default {
 .root {
   display: flex;
   flex-direction: column;
+  height: 100%;
   overflow: hidden;
   color: $ui-color-text-black;
   text-decoration: none;
@@ -56,10 +57,15 @@ export default {
   border-radius: 4px 4px 8px 8px;
 }
 
-.photo {
+.photoWrap {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
   object-fit: cover; // @todo изменить мб
 }
 
