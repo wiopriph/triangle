@@ -71,8 +71,8 @@ export default {
 .wrap {
   width: 100%;
   max-width: inherit;
-  height: 160px;
-  min-height: 160px;
+  height: $ui-element-header-height;
+  min-height: $ui-element-header-height;
 }
 
 .root {
@@ -81,7 +81,7 @@ export default {
   z-index: $z-idx-super;
   width: 100%;
   max-width: inherit;
-  height: 160px;
+  height: $ui-element-header-height;
   padding: 0 20px;
   color: $ui-color-text-black;
   background-color: $ui-color-white;

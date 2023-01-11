@@ -30,7 +30,7 @@ export default {
       <div :class="$style.logo">
         <IconAnbuy />
 
-        <NuxtLink :to="{ name: 'index' }" :class="$style.policy">
+        <NuxtLink :to="{ name: 'privacy' }" :class="$style.policy">
           privacy policy
         </NuxtLink>
       </div>
@@ -47,7 +47,13 @@ export default {
             :class="$style.categoryItem"
           >
             <NuxtLink
-              :to="{ name: 'index' }"
+              :to="{
+                name: 'cityId-categoryId',
+                params: {
+                  categoryId: item.type,
+                  cityId: 'luanda' // @todo: заменить на утилитку
+                }
+              }"
               :class="$style.categoryLink"
               v-text="item.label"
             />
@@ -56,7 +62,7 @@ export default {
       </div>
 
       <div :class="$style.copyright">
-        &#169; 2023
+        Anbuy &#169; 2023
       </div>
 
       <div :class="$style.divider" />

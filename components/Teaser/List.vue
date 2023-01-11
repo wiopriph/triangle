@@ -47,5 +47,10 @@ export default {
 <style lang="scss" module>
 .root {
   overflow: hidden;
+
+
+  @include md {
+    margin-right: -20px; // fix: компенсация бокового маржина
+  }
 }
 </style>

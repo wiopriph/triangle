@@ -20,9 +20,10 @@ export default {
   computed: {
     link() {
       return {
-        name: 'categories',
+        name: 'cityId-categoryId',
         params: {
-          alias: this.alias,
+          categoryId: this.alias,
+          cityId: 'luanda', // @todo: заменить на утилитку
         },
       };
     },
@@ -69,17 +70,20 @@ $iconWidth: 146px;
   color: $ui-color-text-black;
   text-decoration: none;
 
-  &:hover {
+  @include exclude-md {
 
-    .ellipse {
-      background: $ui-color-blue-light;
+    &:hover {
+
+      .ellipse {
+        background: $ui-color-blue-light;
+      }
     }
-  }
 
-  &:active {
+    &:active {
 
-    .ellipse {
-      background: $ui-color-black;
+      .ellipse {
+        background: $ui-color-black;
+      }
     }
   }
 }

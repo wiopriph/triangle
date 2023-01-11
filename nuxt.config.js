@@ -9,15 +9,18 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s | Triângulo',
-    title: 'default title',
+    title: 'Triângulo - bulletin board, private ads',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Bulletin board - fresh announcements for the sale and purchase of goods of all categories. The easiest way to sell or buy things. Post an ad for free in Triângulo.',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
